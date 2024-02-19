@@ -2,7 +2,7 @@ from voice_rec import Speak, Voice
 from openai import OpenAI
 from config import *
 class Jarvis:
-    def __init__(self, model, name="Javrvis",system="You are Jarvis") -> None:
+    def __init__(self, model, name="Jarvis",system="You are Jarvis") -> None:
         self.name = name
         self.system = system
         self.model  = model
@@ -10,8 +10,8 @@ class Jarvis:
 
         speaker_model = 'tts-1'
         voice_record_model = 'whisper-1'
-        self.speaker = Speak(model=speaker_model, file_path='prueba01' ).setup()
-        self.voice_record = Voice(model=voice_record_model, file='prueba01').setup()
+        self.speaker = Speak(model=speaker_model, file_path='prueba01' )
+        self.voice_record = Voice(model=voice_record_model, file='prueba01')
         
         
     def setup(self):
@@ -34,6 +34,35 @@ class Jarvis:
         message = self.jarvis.beta.threads.messages.create(thread_id=thread.id,
                                                            role='user',
                                                            content='UNDEFINE')
+        
+        return thread
+    
+    def triggerThread(self, thread, assistant):
+        self.jarvis.beta.threads.runs.create(
+            thread_id=thread.id,
+            assistant_id=assistant.id
+        )
+        
+    def listen(self):
+        text = self.voice_record.voiceTranslation()
+        
+        return text
+    
+    def speak(self, message):
+        self.speaker.voiceSpeaker(message, 'test01')
+        
+    def proccesComand(self, text, assitant):
+        pass
+    
+    def start(self):
+        command = self.listen()
+        assistant = self.createAssistant()
+        
+        thread = self.createThread() # Thread creator
+        self.triggerThread(thread, assistant)
+        
+        response = self.proccesComand(command, assitant=assistant)
+        self.speak(response)
         
         
         

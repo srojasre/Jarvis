@@ -14,7 +14,7 @@ class Functions:
             print(f'Class not created{'undefine'}')
         pass
     
-    
+
     
     
     
