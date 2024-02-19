@@ -47,7 +47,7 @@ print(response)
 ```
 In this example, Jarvis receives a message requesting to turn on the lights in the living room. Jarvis interprets the message and executes the corresponding action.
 
-##Contributing
+## Contributing
 Contributions to Jarvis are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
 ## License
