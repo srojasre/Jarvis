@@ -99,7 +99,7 @@ class Speak:
     def setup(self):
         self.tts_controller.api_key = API_KEY
     
-    def voiceSpeaker(self, text:str, path:function):
+    def voiceSpeaker(self, text:str, path):
         
         voice = self.tts_controller.audio.speech.create(model=self.model,
                                                         voice=self.voice,

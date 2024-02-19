@@ -6,9 +6,10 @@ class Window:
     
     def __init__(self) -> None:
         self.root = tk.Tk()
-        self.record_controller = StartRecording('preuba01')
+        self.root.geometry('800x800') # SetCustom value
+        self.record_controller = StartRecording('prueba01')
        
-        self.root.title("AI Assistant Recorder")
+        self.root.title("Jarvis") # Custom
         self.is_recording = False  # Stauts
         
         self.record_button = ttk.Button(self.root, text="Start Recording", command=self.toggle_recording)
@@ -35,3 +36,4 @@ class Window:
     def start(self):
         self.root.mainloop()
             
+     
