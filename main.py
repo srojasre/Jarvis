@@ -1,5 +1,5 @@
 from voice_rec import StartRecording
-import assistant as Jarvis
+from assistant import Jarvis
 
 def __main__ ():
     """ 
@@ -14,7 +14,11 @@ def __main__ ():
     recorder.__close__
      """
      
-    pass
+     
+    bot = Jarvis('gpt-3.5')
+    bot.start()
+    
+    
     
     
     
