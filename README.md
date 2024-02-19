@@ -34,7 +34,7 @@ Jarvis can be used for various purposes including:
 ## Example
 
 ```python
-from jarvis import Jarvis
+from assistant import Jarvis
 
 # Initialize Jarvis
 jarvis = Jarvis()
