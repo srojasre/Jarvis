@@ -1,6 +1,8 @@
 from openai import OpenAI
 import pyaudio
 import wave
+from pathlib import Path
+from config import *
 class Voice:
     
     """
@@ -12,14 +14,13 @@ class Voice:
     ***VoideTranslation: TTs model of transcription
     """
     #Atributes 
-    def __init__(self, model, voice, file) -> None:
+    def __init__(self, model, file) -> None:
         self.tts_controller = OpenAI() #Model init
-        self.voice = voice
         self.model = model
         self.file = open(file)
         
-    def setup(self, api_key):
-        self.tts_controller.api_key = api_key
+    def setup(self):
+        self.tts_controller.api_key = API_KEY
         
     def voiceTranslation(self):
         self.tts_controller.audio.transcriptions.create(
@@ -74,5 +75,37 @@ class StartRecording:
         self.stream.close()
         self.audio.terminate()
             
+            
+class Speak:
+    def __init__(self, model, voice, file_path) -> None:
+        self.tts_controller = OpenAI()
+        self.model = model
+        self.voice = voice
+        self.file = file_path
+        
+    def nameFile(self):
+        speech_file_path = Path(__file__).parent/ self.file
+        
+        return speech_file_path
+    
+    def setup(self):
+        self.tts_controller.api_key = API_KEY
+    
+    def voiceSpeaker(self, text:str, path:function):
+        
+        voice = self.tts_controller.audio.speech.create(model=self.model,
+                                                        voice=self.voice,
+                                                        input= text
+        )
+        
+        voice.stream_to_file(path)
+        
+    
+    
+    
+        
+    
+        
+        
             
         
