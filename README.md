@@ -14,7 +14,7 @@ Jarvis is a Python program designed to emulate the functionality of a fictional 
 To get started with Jarvis, follow these steps:
 
 1. **Clone the Repository**: Clone the Jarvis repository to your local machine using the following command:
-git clone https://github.com/yourusername/jarvis.git   
+git clone https://github.com/srojasre/Jarvis.git   
 2. **Install Dependencies**: Navigate to the cloned directory and install the required dependencies by running:
 pip install -r requirements.txt
 3. **Run Jarvis**: Execute the `main.py` script to start Jarvis:
