@@ -1,2 +1,5 @@
 wave
 pyaudio
+openai
+pathlib
+tkinter
