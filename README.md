@@ -17,7 +17,7 @@ To get started with Jarvis, follow these steps:
 git clone https://github.com/yourusername/jarvis.git   
 2. **Install Dependencies**: Navigate to the cloned directory and install the required dependencies by running:
 pip install -r requirements.txt
-3. **Run Jarvis**: Execute the `jarvis.py` script to start Jarvis:
+3. **Run Jarvis**: Execute the `main.py` script to start Jarvis:
 python jarvis.py
 
 4. **Interact with Jarvis**: Once Jarvis is running, you can interact with it by sending messages and observing its responses.
@@ -29,6 +29,7 @@ Jarvis can be used for various purposes including:
 - **Home Automation**: Control smart devices in your home by sending commands to Jarvis.
 - **Information Retrieval**: Ask Jarvis questions to retrieve information from the web or local databases.
 - **Data Analysis**: Provide data sets to Jarvis for analysis and receive insights or summaries.
+- - **Functions**: Not implemented
 
 ## Example
 
@@ -37,13 +38,13 @@ from jarvis import Jarvis
 
 # Initialize Jarvis
 jarvis = Jarvis()
+jarvis.start()
 
 # Send a message to Jarvis
-message = "Jarvis, please turn on the lights in the living room."
-response = jarvis.interpret_message(message)
+""Hey jarvis turn de light on on living room""
 
-# Print Jarvis's response
-print(response)
+# Expected answer
+""Ok, light on [**Ligts], something more?""
 ```
 In this example, Jarvis receives a message requesting to turn on the lights in the living room. Jarvis interprets the message and executes the corresponding action.
 
