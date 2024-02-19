@@ -1,6 +1,10 @@
 from voice_rec import StartRecording
 from assistant import Jarvis
 
+"""
+Main file
+"""
+
 def __main__ ():
     """ 
     Metodo de grabación

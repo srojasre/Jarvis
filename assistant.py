@@ -2,6 +2,18 @@ from voice_rec import Speak, Voice
 from openai import OpenAI
 from config import *
 class Jarvis:
+    """
+    Jarvis class is the mains assitant of the project called Jarvis 
+    
+    *** createAssistant:
+    *** createThread:
+    *** triggerThread:
+    *** listen:
+    *** speak:
+    *** proccesCommand:
+    *** start:
+    """ 
+    #More detail info into update 5
     def __init__(self, model, name="Jarvis",system="You are Jarvis") -> None:
         self.name = name
         self.system = system
@@ -51,7 +63,7 @@ class Jarvis:
     def speak(self, message):
         self.speaker.voiceSpeaker(message, 'test01')
         
-    def proccesComand(self, text, assitant):
+    def proccesComand(self, text, assitant): # not finish #TODO
         pass
     
     def start(self):

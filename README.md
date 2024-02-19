@@ -31,7 +31,7 @@ Jarvis can be used for various purposes including:
 - **Home Automation**: Control smart devices in your home by sending commands to Jarvis.
 - **Information Retrieval**: Ask Jarvis questions to retrieve information from the web or local databases.
 - **Data Analysis**: Provide data sets to Jarvis for analysis and receive insights or summaries.
-- - **Functions**: Not implemented
+- **Functions**: Not implemented
 
 ## Example
 

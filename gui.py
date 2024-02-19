@@ -3,6 +3,10 @@ from tkinter import ttk
 from voice_rec import StartRecording
 
 class Window:
+    #TODO
+    """
+    Window class [NOT IMPLEMENTED]
+    """
     
     def __init__(self) -> None:
         self.root = tk.Tk()
