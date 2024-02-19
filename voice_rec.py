@@ -11,9 +11,8 @@ class Voice:
     
     ***Init: Attributes
     ***Setup: API_KEY 
-    ***VoideTranslation: TTs model of transcription
-    """
-    #Atributes 
+    ***VoiceTranslation: TTs model of transcription
+    """ 
     def __init__(self, model, file) -> None:
         self.tts_controller = OpenAI() #Model init
         self.model = model
@@ -77,6 +76,15 @@ class StartRecording:
             
             
 class Speak:
+    
+    """Speak class allow to pass a txt file to convert it into natural language voice
+    using openAI tts-1 model
+    
+    *** Init: Atributtes
+    *** nameFile: Path to store the fiel
+    *** Setup: API_KEY
+    *** voiceSpeaker: OpenAI tts model creation, and save file
+    """
     def __init__(self, model, voice, file_path) -> None:
         self.tts_controller = OpenAI()
         self.model = model
